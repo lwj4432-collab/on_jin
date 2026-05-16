@@ -1,3 +1,5 @@
+import MemoBoard from "../components/MemoBoard";
+
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center py-24 px-4 sm:px-6 lg:px-8">
@@ -22,11 +24,7 @@ export default function Home() {
 
       {/* 여기에 새로운 섹션(예: About, Skills, Projects 목록) 컴포넌트를 추가하세요 */}
       <section className="mt-32 w-full max-w-5xl">
-        <div className="p-8 border border-dashed border-gray-300 rounded-2xl bg-gray-50 text-center">
-          <p className="text-gray-500 italic">
-            "이 공간에 새로운 컴포넌트를 만들어 추가해 보세요!"
-          </p>
-        </div>
+        <MemoBoard />
       </section>
     </div>
   );

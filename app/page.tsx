@@ -27,19 +27,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* 여기에 새로운 섹션(예: About, Skills, Projects 목록) 컴포넌트를 추가하세요 */}
-      <section className="mt-32 w-full max-w-5xl">
-        <div className="p-8 border border-dashed border-gray-300 rounded-2xl bg-gray-50 text-center flex flex-col items-center">
-          <p className="text-gray-500 italic mb-4">
-            위의 미니탭을 눌러 자유 메모장으로 이동해 보세요!
-          </p>
-          <Link href="/post-it">
-            <button className="px-6 py-2 bg-blue-100 text-blue-700 hover:bg-blue-200 font-medium rounded-full transition-colors">
-              포스트잇 바로가기
-            </button>
-          </Link>
-        </div>
-      </section>
     </div>
   );
 }

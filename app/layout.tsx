@@ -27,7 +27,6 @@ export default function RootLayout({
             <nav>
               <ul className="flex space-x-6 text-sm font-medium">
                 <li><Link href="/" className="hover:text-blue-600 transition-colors">Home</Link></li>
-                <li><Link href="/post-it" className="hover:text-blue-600 transition-colors">포스트잇</Link></li>
               </ul>
             </nav>
           </div>

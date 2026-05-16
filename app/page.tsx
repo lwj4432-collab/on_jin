@@ -4,8 +4,20 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center py-24 px-4 sm:px-6 lg:px-8">
       {/* Hero Section */}
-      <div className="text-center max-w-3xl">
-        <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-gray-900 mb-6">
+      <div className="text-center max-w-3xl flex flex-col items-center">
+        {/* 돌출 형태의 미니탭 */}
+        <Link 
+          href="/post-it"
+          className="mb-8 inline-flex items-center px-5 py-2 text-sm font-semibold text-blue-800 bg-blue-50 border border-blue-200 rounded-full shadow-sm hover:shadow-md hover:bg-blue-100 transition-all duration-200 transform hover:-translate-y-0.5"
+        >
+          <span className="mr-2">📝</span>
+          포스트잇 구경가기
+          <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </Link>
+        
+        <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-800 via-blue-500 to-cyan-400">
           온진의 포트폴리오
         </h1>
         <p className="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed">
@@ -24,9 +36,9 @@ export default function Home() {
 
       {/* 여기에 새로운 섹션(예: About, Skills, Projects 목록) 컴포넌트를 추가하세요 */}
       <section className="mt-32 w-full max-w-5xl">
-        <div className="p-8 border border-dashed border-gray-300 rounded-2xl bg-gray-50 text-center">
+        <div className="p-8 border border-dashed border-gray-300 rounded-2xl bg-gray-50 text-center flex flex-col items-center">
           <p className="text-gray-500 italic mb-4">
-            상단 네비게이션바의 "포스트잇" 탭을 눌러 자유 메모장으로 이동해 보세요!
+            위의 미니탭을 눌러 자유 메모장으로 이동해 보세요!
           </p>
           <Link href="/post-it">
             <button className="px-6 py-2 bg-blue-100 text-blue-700 hover:bg-blue-200 font-medium rounded-full transition-colors">

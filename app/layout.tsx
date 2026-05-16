@@ -21,7 +21,7 @@ export default function RootLayout({
         {/* 상단 헤더 컴포넌트 */}
         <header className="w-full bg-white shadow-sm sticky top-0 z-50">
           <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-            <div className="text-xl font-bold tracking-tight text-blue-600">
+            <div className="text-xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-900 via-indigo-800 to-purple-900 drop-shadow-sm">
               온진이꺼
             </div>
             <nav>

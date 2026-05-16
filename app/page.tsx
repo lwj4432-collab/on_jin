@@ -5,18 +5,6 @@ export default function Home() {
     <div className="flex flex-col items-center justify-center py-24 px-4 sm:px-6 lg:px-8">
       {/* Hero Section */}
       <div className="text-center max-w-3xl flex flex-col items-center">
-        {/* 돌출 형태의 미니탭 */}
-        <Link 
-          href="/post-it"
-          className="mb-8 inline-flex items-center px-5 py-2 text-sm font-semibold text-blue-800 bg-blue-50 border border-blue-200 rounded-full shadow-sm hover:shadow-md hover:bg-blue-100 transition-all duration-200 transform hover:-translate-y-0.5"
-        >
-          <span className="mr-2">📝</span>
-          포스트잇 구경가기
-          <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </Link>
-        
         <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-800 via-blue-500 to-cyan-400">
           온진의 포트폴리오
         </h1>
@@ -26,11 +14,16 @@ export default function Home() {
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          {/* 가짜(Placeholder) 버튼 */}
-          {/* 여기에 기능이 연결된 버튼이나 새로운 인터랙션 요소를 추가하세요 */}
-          <button className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-full transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-            기능 추가 버튼
-          </button>
+          <Link 
+            href="/post-it"
+            className="inline-flex items-center px-6 py-3 text-base font-semibold text-blue-900 bg-blue-50 border border-blue-200 rounded-full shadow-sm hover:shadow-md hover:bg-blue-100 transition-all duration-200 transform hover:-translate-y-0.5"
+          >
+            <span className="mr-2">📝</span>
+            포스트잇 구경가기
+            <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
         </div>
       </div>
 

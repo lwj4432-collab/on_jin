@@ -17,12 +17,14 @@ const COLORS = [
   "bg-pink-200",
   "bg-purple-200",
   "bg-orange-200",
+  "bg-teal-200",
 ];
 
 export default function MemoBoard() {
   const [memos, setMemos] = useState<Memo[]>([]);
   const [author, setAuthor] = useState("");
   const [content, setContent] = useState("");
+  const [selectedColor, setSelectedColor] = useState(COLORS[0]);
   const [isLoaded, setIsLoaded] = useState(false);
 
   // Load from localStorage on mount
@@ -54,9 +56,10 @@ export default function MemoBoard() {
         month: "long",
         day: "numeric",
         hour: "2-digit",
+        hour: "2-digit",
         minute: "2-digit",
       }),
-      color: COLORS[Math.floor(Math.random() * COLORS.length)],
+      color: selectedColor,
     };
 
     setMemos((prev) => [newMemo, ...prev]);
@@ -99,6 +102,25 @@ export default function MemoBoard() {
             className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-colors min-h-[120px] resize-y"
             required
           />
+          
+          <div className="flex flex-col sm:flex-row gap-6 mt-2">
+            {/* 색상 선택 */}
+            <div className="flex-1">
+              <label className="block text-sm font-medium text-gray-700 mb-2">포스트잇 색상</label>
+              <div className="flex gap-2">
+                {COLORS.map((c) => (
+                  <button
+                    key={c}
+                    type="button"
+                    onClick={() => setSelectedColor(c)}
+                    className={`w-8 h-8 rounded-full ${c} ${selectedColor === c ? 'ring-2 ring-offset-2 ring-gray-800' : 'ring-1 ring-black/10'}`}
+                    title={c}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+
           <button
             type="submit"
             className="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors shadow-sm"
